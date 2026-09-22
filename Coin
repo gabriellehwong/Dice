@@ -1,0 +1,64 @@
+Coin bob = new Coin(50, 150);
+void setup()
+{
+  size(500, 300);
+  textAlign(CENTER, CENTER);
+  noLoop();
+}
+void draw()
+{
+  Coin bob;
+  int x = 50;
+  while (x <= 500)
+  {
+    bob = new Coin(x, 150);
+    bob.flip();
+    bob.show();
+    x = x + 50;
+  }
+}
+void mousePressed()
+{
+  redraw();
+}
+class Coin
+{
+  //three member variables
+  boolean heads;
+  int myX, myY;
+
+  //three member functions
+  Coin(int x, int y) //constructor
+  {
+    //java code
+    flip(); //initialize heads
+    myX = x;
+    myY = y;
+  }
+  void flip()
+  {
+    //java code
+    if (Math.random() < .5)
+    {
+      heads = true;
+    } else
+    {
+      heads = false;
+    }
+  }
+  void show()
+  {
+    //java code
+    noStroke();
+    fill(255);
+    ellipse(myX, myY, 50, 50);
+    fill(0);
+    if (heads == true)
+    {
+      text("heads", myX, myY);
+    } else
+    {
+      text("tails", myX, myY);
+    }
+  }
+}
