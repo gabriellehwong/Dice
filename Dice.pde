@@ -12,7 +12,7 @@ void draw()
 
 	for (int row = 0; row < 3; row++) {
 		for (int col = 0; col < 3; col++) {
-			Die d = new Die(90 + col * 110, 75 + row * 110);
+			Die d = new Die(100 + col * 110, 75 + row * 110);
 			d.roll();
 			d.show();
 
@@ -24,10 +24,10 @@ void draw()
 	fill(0);
 	textSize(24);
 	textAlign(CENTER);
-	text("Total: " + total, 250, 440);
+	text("Total: " + total, 250, 420);
 
 	textSize(14);
-	text("Click anywhere to roll again!", width / 2, 480);
+	text("Click anywhere to roll again!", width / 2, 460);
 }
 void mousePressed()
 {
