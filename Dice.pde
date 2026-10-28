@@ -27,7 +27,7 @@ void draw()
 	text("Total: " + total, 250, 450);
 
 	textSize(14);
-	text("Click anywhere to roll again!", width / 2, 580);
+	text("Click anywhere to roll again!", width / 2, 480);
 }
 void mousePressed()
 {
