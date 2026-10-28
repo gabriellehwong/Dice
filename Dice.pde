@@ -44,10 +44,10 @@ class Die //models one single dice cube
 	Die(int x, int y) //constructor
 	{
 		//variable initializations here
-		my.x = x;
-		my.y = y;
-		my.size = 70;
-		my.value = 1;
+		this.x = x;
+		this.y = y;
+		this.size = 70;
+		this.value = 1;
 	}
 	void roll()
 	{
